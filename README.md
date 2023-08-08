@@ -1,17 +1,16 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0wrsx4Jb)
-### Group Name : WebScrappers   
+### Group Name: WebScrappers   
 ## Name : 
 ##       Sejal Chandak 002789139
 ##       Shubham Singh 002762502
 ##       Abhishek Sand 002752069
 ##       Krupa Patel   002789566
        
-*Project Title : Eventify*
-*Description of the project *: Eventify is an event management platform designed for event organizers and attendees alike. The platform is built on Node.js and uses a REST API to enable seamless communication between the server and client applications. With Eventify, users can create, manage, and promote events, as well as discover and register for events happening near them. Overall, eventify will provide a robust and user-friendly platform for event organizers and attendees to connect and collaborate.
+*Project Title: Eventify*
+*Description of the project *: Eventify is an event management platform designed for event organizers and attendees alike. The platform is built on Node.js and uses a REST API to enable seamless communication between the server and client applications. With Eventify, users can create, manage, and promote events, as well as discover and register for events happening near them. Eventify will provide a robust and user-friendly platform for event organizers and attendees to connect and collaborate.
 
-*User Stories and assignment to team members :*
+*User Stories and assignments to team members :*
 Sejal Chandak
-1. Sign up /Registration page  : Creating a signup or registration page for Organizer and Attendees with all the attributes and validations
+1. Sign up /Registration page: Creating a signup or registration page for Organizer and Attendees with all the attributes and validations
 2. Sign in / Login page : Creating a signin or login page for Organizer and Attendees with all the attributes and validations
 3. Nav bar : Creating nav bar with logo , title ,etc
 4. Profile page (Update) : Creating a profile page for oragnizer and attendes to enable them to update and delete the details
