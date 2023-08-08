@@ -1,0 +1,163 @@
+openapi: 3.0.0
+info:
+  title: Eventify
+  version: 1.0.0
+  description: REST API for managing events
+servers:
+  - url: http://localhost:8000/api
+paths:
+  /profile:
+    get:
+      summary: Get Profile Details
+      responses:
+        '200':
+          description: Returns a list of Profile details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Profile'
+    post:
+      summary: Create a new Profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '201':
+          description: Returns the newly created Profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+                
+  /Events/{event_id}/description:
+    get:
+      summary: Get all the description for an Event
+      parameters:
+        - in: path
+          name: event_id
+          required: true
+          schema:
+            type: integer
+          description: The id of the event
+      responses:
+        '200':
+          description: Returns a list of all events with description
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Description'
+    post:
+      summary: Attend an Event
+      parameters:
+        - in: path
+          name: event_id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Description'
+      responses:
+        '201':
+          description: Returns the newly created job application
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Description'
+                
+  /events/{event_id}/gallery:
+    get:
+      summary: Get Events Registered by user
+      parameters:
+        - in: path
+          name: event_id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the event
+      responses:
+        '200':
+          description: Returns a list of all events with description
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gallerys'
+    post:
+      summary: Get Events Registered by user
+      parameters:
+        - in: path
+          name: event_id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Gallerys'
+      responses:
+        '201':
+          description: Returns the newly created job application
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Gallerys'
+
+components:
+  schemas:
+    Profile:
+      type: object
+      properties:
+        First Name:
+          type: string
+        Last Name:
+          type: string
+        Phone Number:
+          type: integer
+        Email:
+          type: string
+        Password:
+          type: string
+        UserType:
+          type: string
+        UserID:
+          type: integer
+    Description:
+      type: object
+      properties:
+        event_id:
+          type: integer
+        description:
+          type: string
+        status:
+          type: string
+        location:
+          type: string
+        Date Time:
+          type: string
+      example:
+        event_id
+    Gallerys:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        company:
+          type: string
